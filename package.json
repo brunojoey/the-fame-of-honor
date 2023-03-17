@@ -1,0 +1,26 @@
+{
+  "name": "the-fame-of-honor",
+  "version": "1.0.0",
+  "description": "NFL Ring of Honor Showcase Within a MERN Stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunojoey/the-fame-of-honor.git"
+  },
+  "author": "Joey Bruno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunojoey/the-fame-of-honor/issues"
+  },
+  "homepage": "https://github.com/brunojoey/the-fame-of-honor#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.2",
+    "nodemon": "^2.0.21",
+    "path": "^0.12.7"
+  }
+}
