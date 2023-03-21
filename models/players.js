@@ -6,7 +6,7 @@ const playersSchema = new Schema({
   position: { type: String, required: false },
   team_name: { type: String, requried: true },
   notes: { type: String, required: false },
-  years_active: { type: String, required: true },
+  tenure: { type: String, required: true },
   year_inducted: { type: Number, required: false }
 });
 
