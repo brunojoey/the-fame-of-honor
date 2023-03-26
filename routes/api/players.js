@@ -1,8 +1,7 @@
 const router = require("express").Router();
-import { findByPosition } from "../../controllers/playersController.js";
+const { findByPosition } = require("../../controllers/playersController");
 
-// matches with '/api/positions/:player_position'
-router.route("/:player_position")
-  .get(findByPosition);
+// matches with '/api/players/:position'
+router.route("/:position").get(findByPosition);
 
 module.exports = router;

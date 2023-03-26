@@ -16,10 +16,13 @@ if (process.env.NODE_ENV === 'production') {
 // Add routes, both API and view
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hallOfGreatsDB', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
+
+// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
+mongoose.set("strictQuery", false);
 
 app.listen(PORT, function() {
   console.log(`🌎  ==> server listening on Port: ${PORT}`);
