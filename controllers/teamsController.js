@@ -8,14 +8,13 @@ module.exports = {
       .catch((err) => err.status(422).json(err));
   },
   findById: function (req, res) {
-    db.teams.findOne({ _id: req.params.id })
+    db.teams.findOne({ _id: req.params._id })
       .then((teamsModel) => res.json(teamsModel))
       .catch((err) => err.status(422).json(err));
   },
   findTeamInductees: function (req, res) {
     db.teams.aggregate([
       {
-        $match: { _id: req.params.id },
         $lookup: {
           from: "players",
           localField: "team_name",
